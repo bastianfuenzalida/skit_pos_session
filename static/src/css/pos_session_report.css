@@ -1,0 +1,21 @@
+.highlight{
+	background-color: #49A6C8;
+	color: white;
+}
+.overlap{
+	page-break-inside: avoid;
+}
+.thborder{
+	border-top: 1px solid black;
+}
+.table-footer{
+	width:100%;
+	min-width:100%; 
+	cellspacing:10; 
+	border-spacing:10px;
+	margin-left:40px;
+}
+.table-footer td{
+  padding-top: 5px;
+  padding-bottom: 5px;
+}

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data> 
+     
+      <report 
+            id="pos_session_statement"
+            model="pos.session"
+            string="POS Closing Summary Report"
+            report_type="qweb-pdf"
+            name="skit_pos_session.report_statementline"
+            file="skit_pos_session.report_statementline"
+            attachment_use="True"
+            attachment="(object.state not in ('opened')) and ('POS'+(object.name or '').replace('/','')+'.pdf')"
+     /> 
+        
+    <!-- used from POS UI, no need to be in print menu -->
+    <record id="pos_session_report" model="ir.actions.report.xml">
+        <field name="name">POS Closing Summary Report</field>
+        <field name="model">pos.session</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">skit_pos_session.report_statementline</field>
+    </record>
+        
+    </data>
+</openerp>
